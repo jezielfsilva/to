@@ -9,6 +9,14 @@ class PageSignup extends React.Component {
             nome: '',
             email: '',
             senha: null,
+
+            userData: [
+                {
+                    nome: '',
+                    email: '',
+                    senha: null,
+                }
+            ]
         }
     }
 
@@ -30,6 +38,16 @@ class PageSignup extends React.Component {
         })
     }
 
+    saveData = () => {
+        this.setState({
+            nome: this.getname.value,
+            email: this.getemail.value,
+            senha: this.getpassword.value,
+        })
+        console.log(this.userData);
+    }
+    
+
     render () {
         return (
             <div className='box-login'>
@@ -46,7 +64,7 @@ class PageSignup extends React.Component {
                         <input onChange={this.getpassword} type="password" placeholder="sua senha aqui" />
                     </label>
                     <p>{this.state.senha}</p>
-                    <button>Signup</button>
+                    <button onClick={this.saveData}>Signup</button>
                 </form>
             </div>
         )
