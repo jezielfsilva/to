@@ -6,37 +6,40 @@ class PageLoggin extends React.Component {
         super(props);
 
         this.state = {
-            email: '',
-            senha: null,
+            email: 'listadetarefas@gmail.com',
+            senha: '345687',
+
+            logText: '',
         }
     }
 
-    getemail = (event) => {
-        this.setState({
-            email: event.target.value,
-        })
-    }
+    userLogin = (event) => {
+        event.preventDefault()
+        if ((document.getElementById('Email').value === this.state.email) && 
+            (document.getElementById('Senha').value === this.state.senha)) {
 
-    getpassword = (event) => {
-        this.setState({
-            senha: event.target.value,
-        })
+            }
+        else {
+            this.setState ({
+                logText: 'email ou senha inválidos',
+            })
+        }
     }
 
     render () {
         return (
             <div>
-                <form>
+                <form onSubmit={this.userLogin}>
                     <label>email:
-                        <input onChange={this.getemail} type="email" placeholder="seu email" />
+                        <input id = "Email" type="email" placeholder="seu email" />
                     </label>
-                    <p>{this.state.email}</p>
                     <label>senha:
-                        <input onChange={this.getpassword} type="password" placeholder="sua senha" />
+                        <input id = "Senha" type="password" placeholder="sua senha" />
                     </label>
-                    <p>{this.state.senha}</p>
                     <button>login</button>
                 </form>
+                <p>{this.state.logText}</p>
+                <p>Caso você ainda não tenha cadrastro faça agora mesmo <a onClick={this.props.backCreateAcc} href = '*'>aqui</a></p>
             </div>
         )
     }

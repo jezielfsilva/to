@@ -8,64 +8,39 @@ class PageSignup extends React.Component {
         this.state = {
             nome: '',
             email: '',
-            senha: null,
-
-            userData: [
-                {
-                    nome: '',
-                    email: '',
-                    senha: null,
-                }
-            ]
+            senha: '',
         }
     }
-
-    getname = (event) => {
-        this.setState({
-            nome: event.target.value,
-        })
-    }
-
-    getemail = (event) => {
-        this.setState({
-            email: event.target.value,
-        })
-    }
-
-    getpassword = (event) => {
-        this.setState({
-            senha: event.target.value,
-        })
-    }
-
-    saveData = () => {
-        this.setState({
-            nome: this.getname.value,
-            email: this.getemail.value,
-            senha: this.getpassword.value,
-        })
-        console.log(this.userData);
-    }
     
+    userData = (event) => {
+        event.preventDefault()
+        this.setState ({
+            nome: document.getElementById('Nome').value,
+            email: document.getElementById('Email').value,
+            senha: document.getElementById('Senha').value
+    })
+    console.log(this.state.nome)
+    }
 
     render () {
         return (
             <div className='box-login'>
-                <form>
+                <form onSubmit={this.userData}>
                     <label>nome:
-                        <input onChange={this.getname} type="text" placeholder="seu nome aqui" />
+                        <input id = "Nome" type="text" placeholder="seu nome aqui" />
                     </label>
-                    <p>{this.state.nome}</p>
                     <label>email:
-                        <input onChange={this.getemail} type="email" placeholder="seu email aqui" />
+                        <input id = "Email" type="email" placeholder="seu email aqui" />
                     </label>
-                    <p>{this.state.email}</p>
                     <label>senha:
-                        <input onChange={this.getpassword} type="password" placeholder="sua senha aqui" />
+                        <input id = "Senha" type="password" placeholder="sua senha aqui" />
                     </label>
-                    <p>{this.state.senha}</p>
-                    <button onClick={this.saveData}>Signup</button>
+                    <label>confirme sua senha:
+                        <input type="password" placeholder="sua senha aqui" />
+                    </label>
+                    <button>Signup</button>
                 </form>
+                <p>Se você já possui uma conta faça <a onClick={this.props.backLogin} href='*' >login</a></p>
             </div>
         )
     }
