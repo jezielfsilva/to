@@ -9,6 +9,7 @@ class PageSignup extends React.Component {
             nome: '',
             email: '',
             senha: '',
+            senha2: '',
         }
     }
     
@@ -17,9 +18,11 @@ class PageSignup extends React.Component {
         this.setState ({
             nome: document.getElementById('Nome').value,
             email: document.getElementById('Email').value,
-            senha: document.getElementById('Senha').value
+            senha: document.getElementById('Senha').value,
+            senha2: document.getElementById('Senha2').value,
     })
     console.log(this.state.nome)
+        this.props.AccountData(document.getElementById('Email').value, document.getElementById('Senha').value)
     }
 
     render () {
@@ -36,7 +39,7 @@ class PageSignup extends React.Component {
                         <input id = "Senha" type="password" placeholder="sua senha aqui" />
                     </label>
                     <label>confirme sua senha:
-                        <input type="password" placeholder="sua senha aqui" />
+                        <input id = "Senha2" type="password" placeholder="sua senha aqui" />
                     </label>
                     <button>Signup</button>
                 </form>

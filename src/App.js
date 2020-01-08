@@ -9,36 +9,50 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-        telaRenderizada: <PageSignup
-       backLogin = {this.changeScreen} />
+        telaRenderizada: 'createAccount',
+       userData: {
+         email: '',
+         senha: ''
+       }
     }
 }
 
 changeScreen = (event) => {
   event.preventDefault()
   this.setState ({
-    telaRenderizada: <PageLoggin
-    backCreateAcc = {this.mudarScreen} />
+    telaRenderizada: 'loggin'
   })
 }
 
 mudarScreen = (event) => {
   event.preventDefault()
   this.setState ({
-    telaRenderizada: <PageSignup
-    backLogin = {this.changeScreen} />
+    telaRenderizada: 'createAccount'
   })
 }
 
-  render () {
+AccountData = (email, senha) => {
+  this.setState ({
+    userData: {
+      email: email,
+      senha: senha,
+    }
+  })
+}
 
+screenRender = () => {
+  switch (this.state.telaRenderizada) {
+    case 'createAccount':
+      return <PageSignup backLogin = {this.changeScreen} AccountData={this.AccountData}/>;
+    case 'loggin':
+      return <PageLoggin backCreateAcc = {this.mudarScreen}/>;
+  }
+}
+
+  render () {
     return (
       <div className="App">
-        {/* <PageSignup */}
-        {/* backLogin = {this.changeScreen}/> */}
-        {/* <PageLoggin */}
-        {/* backCreateAcc = {this.mudarScreen}/> */}
-        {this.state.telaRenderizada}
+        {this.screenRender()}
       </div>
     );
   }
