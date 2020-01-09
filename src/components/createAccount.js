@@ -27,23 +27,23 @@ class PageSignup extends React.Component {
 
     render () {
         return (
-            <div className='box-login'>
-                <form onSubmit={this.userData}>
-                    <label>nome:
+            <div className='box-signup'>
+                <form className='box-form' onSubmit={this.userData}>
+                    <label className='box-Nome'>nome:
                         <input id = "Nome" type="text" placeholder="seu nome aqui" />
                     </label>
-                    <label>email:
+                    <label className='box-Email'>email:
                         <input id = "Email" type="email" placeholder="seu email aqui" />
                     </label>
-                    <label>senha:
+                    <label className='box-Senha'>senha:
                         <input id = "Senha" type="password" placeholder="sua senha aqui" />
                     </label>
-                    <label>confirme sua senha:
-                        <input id = "Senha2" type="password" placeholder="sua senha aqui" />
+                    <label className='box-Senha2'>confirmação:
+                        <input id = "Senha2" type="password" placeholder="confirmar a senha" />
                     </label>
-                    <button>Signup</button>
+                    <button className='click'>Signup</button>
+                    <p className='text'>Se você já possui uma conta faça <a onClick={this.props.backLogin} href='*' >login.</a></p>
                 </form>
-                <p>Se você já possui uma conta faça <a onClick={this.props.backLogin} href='*' >login</a></p>
             </div>
         )
     }

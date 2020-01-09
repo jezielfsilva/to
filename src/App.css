@@ -36,3 +36,84 @@
     transform: rotate(360deg);
   }
 }
+
+.box-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://www.firmac.it/wp-content/uploads/2018/08/Savin-NY-Website-Background-Web-1.jpg');
+  width: 100vw;
+  height: 100vh;
+}
+
+.box-form, .box-form2 {
+  background-color: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 30vw;
+  height: 38vh;
+  border-radius: 0.9em;
+  box-shadow: 2px 1px 2px #000000;
+}
+
+.box-Nome, .box-Email, .box-Senha, .box-Senha2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 26.5vw;
+  height: 4vh;
+  font-size: 1.3em;
+  color: #FF4500;
+  margin-left: 0.10em;
+}
+
+#Nome, #Email, #Senha, #Senha2 {
+  width: 20vw;
+  height: 3vh;
+  font-size: 1.2em;
+  border: 0.5px solid #363636;
+  border-radius: 0.2em;
+  margin-left: 0.2em;
+}
+
+.click, .click2 {
+  width: 6vw;
+  height: 4vh;
+  border-style: none;
+  border-radius: 0.3em;
+  background-color: #FF4500;
+  color: #F5FFFA;
+  font-size: 1.3em;
+}
+
+.text {
+  font-size: 1.3em;
+  color: #F5FFFA;
+}
+
+.text3 {
+  width: 16vw;
+  font-size: 1.5em;
+  color: #F5FFFA;
+}
+
+.text2 {
+  font-size: 1.2em;
+  color: #FF0000;
+}
+
+a {
+  color: #FF4500;
+  text-decoration: none;
+}
+
+.box-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://www.newspotng.com/wp-content/uploads/2019/01/NEWSPOT-NIGERIA.jpg');
+  width: 100vw;
+  height: 100vh;
+}
