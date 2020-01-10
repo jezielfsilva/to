@@ -29,7 +29,6 @@ class PageLoggin extends React.Component {
                     <p className='text2'>{this.state.logText}</p>
                     <p className='text3'>Caso você ainda não tenha cadrastro faça agora mesmo <a onClick={this.props.backCreateAcc} href = '*'>aqui.</a></p>
                 </form>
-               
             </div>
         )
     }
