@@ -30,10 +30,10 @@ class PageLoggin extends React.Component {
         return (
             <div className='box-login'>
                 <form className='box-form2' onSubmit={this.userLogin}>
-                    <label className='box-Email'>email:
+                    <label className='box-Email'>email
                         <input id = "Email" type="email" placeholder="seu email" />
                     </label>
-                    <label className='box-Senha'>senha:
+                    <label className='box-Senha'>senha
                         <input id = "Senha" type="password" placeholder="sua senha" />
                     </label>
                     <button className='click2'>login</button>

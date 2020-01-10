@@ -29,16 +29,16 @@ class PageSignup extends React.Component {
         return (
             <div className='box-signup'>
                 <form className='box-form' onSubmit={this.userData}>
-                    <label className='box-Nome'>nome:
+                    <label className='box-Nome'>nome
                         <input id = "Nome" type="text" placeholder="seu nome aqui" />
                     </label>
-                    <label className='box-Email'>email:
+                    <label className='box-Email'>email
                         <input id = "Email" type="email" placeholder="seu email aqui" />
                     </label>
-                    <label className='box-Senha'>senha:
+                    <label className='box-Senha'>senha
                         <input id = "Senha" type="password" placeholder="sua senha aqui" />
                     </label>
-                    <label className='box-Senha2'>confirmação:
+                    <label className='box-Senha2'>confirmação da senha
                         <input id = "Senha2" type="password" placeholder="confirmar a senha" />
                     </label>
                     <button className='click'>Signup</button>
