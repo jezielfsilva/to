@@ -36,8 +36,21 @@ AccountData = (email, senha) => {
     userData: {
       email: email,
       senha: senha,
-    }
+    },
+    telaRenderizada: 'loggin'
   })
+}
+
+userLogin = (email, senha) => {
+  console.log(email, senha)
+  if (email === this.state.userData.email && senha === this.state.userData.senha) {
+      console.log('passei e saí correndo!!')
+      }
+  else {
+      this.setState ({
+          logText: 'email ou senha inválidos',
+      })
+  }
 }
 
 screenRender = () => {
@@ -45,7 +58,7 @@ screenRender = () => {
     case 'createAccount':
       return <PageSignup backLogin = {this.changeScreen} AccountData={this.AccountData}/>;
     case 'loggin':
-      return <PageLoggin backCreateAcc = {this.mudarScreen}/>;
+      return <PageLoggin backCreateAcc = {this.mudarScreen} userLogin={this.userLogin}/>;
   }
 }
 

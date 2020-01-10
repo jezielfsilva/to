@@ -6,24 +6,13 @@ class PageLoggin extends React.Component {
         super(props);
 
         this.state = {
-            email: 'listadetarefas@gmail.com',
-            senha: '345687',
-
             logText: '',
         }
     }
 
     userLogin = (event) => {
         event.preventDefault()
-        if ((document.getElementById('Email').value === this.state.email) && 
-            (document.getElementById('Senha').value === this.state.senha)) {
-
-            }
-        else {
-            this.setState ({
-                logText: 'email ou senha inválidos',
-            })
-        }
+        this.props.userLogin(document.getElementById('Email').value, document.getElementById('Senha').value)
     }
 
     render () {
