@@ -47,14 +47,22 @@
   height: 100vh;
 }
 
+.box-modal {
+  width: 25vw;
+  height: 20vh;
+  background-color: #FF4500;
+  box-shadow: 2px 1px 2px #000000;
+  border-radius: 0.9em;
+}
+
 .box-form, .box-form2 {
   background-color: #808080;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  width: 30vw;
-  height: 48vh;
+  width: 32vw;
+  height: 54vh;
   border-radius: 0.9em;
   box-shadow: 2px 1px 2px #000000;
 }
@@ -88,6 +96,11 @@
   font-size: 1.3em;
 }
 
+.text-error {
+  font-size: 1.1em;
+  color: #FF0000;
+}
+
 .text {
   font-size: 1.3em;
   color: #F5FFFA;
@@ -117,4 +130,15 @@ a {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: #00000040;
 }

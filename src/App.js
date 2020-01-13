@@ -37,7 +37,6 @@ AccountData = (email, senha) => {
       email: email,
       senha: senha,
     },
-    telaRenderizada: 'loggin'
   })
 }
 
