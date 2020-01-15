@@ -40,7 +40,7 @@ class PageSignup extends React.Component {
         <div className='overlay' onClick={() => this.setState({modOpen: false})}>
             <div className="box-modal">
                 <p>Conta criada com sucesso</p>
-                <button onClick={() => this.props.changeScreen('loggin')}>Fazer login
+                <button onClick={this.props.backLogin}>Fazer login
                 </button>
             </div>
         </div>
